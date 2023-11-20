@@ -37,3 +37,9 @@ jobs:
     - name: Test with pytest
       run: |
         pytest automated_tests.py
+
+    - name: Build Docker Image
+      run: docker build -t time-calc:1.0.1
+
+    - name: Run Script
+      run: docker run time-calc:1.0.1

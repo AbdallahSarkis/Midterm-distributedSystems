@@ -1,7 +1,6 @@
-FROM python:lastest
+FROM python:latest
 
+COPY main.py .
+COPY time_calculator.py .
 
-copy main.py .
-copy time_calculator.py .
-
-ENTRYPOINT ['python3',"main.py"]
+ENTRYPOINT ["python3", "main.py"]
